@@ -8,7 +8,7 @@ import ToastWrapper from "components/ToastWrapper";
 import WalletGlobalProvider from "components/WalletGlobalProvider";
 
 // If loading a variable font, you don't need to specify the font weight
-const inter = Inter();
+const inter = Inter({ subsets: ["latin"] });
 
 import "../globals.css";
 
