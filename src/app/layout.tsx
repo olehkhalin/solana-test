@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "Solana network workaround | artkhalin labs",
     images: [
       {
-        url: "https://solana.artkhalin.comm/og_image.jpg",
+        url: "https://solana.artkhalin.com/og_image.jpg",
         width: 1440,
         height: 860,
       },
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: "Solana network workaround | artkhalin labs",
     images: [
       {
-        url: "https://solana.artkhalin.comm/og_image.jpg",
+        url: "https://solana.artkhalin.com/og_image.jpg",
         width: 1440,
         height: 860,
       },
