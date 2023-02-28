@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Inter";
+}
+
+html, body {
+  background: radial-gradient(48.02% 114.17% at 86.98% 100%, rgba(99, 214, 188, 0.2) 28.77%, rgba(99, 214, 188, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(30.02% 72.69% at 4.13% 90.54%, rgba(185, 80, 230, 0.2) 17.58%, rgba(169, 98, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #120A2F;
+  color: #fff;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.wallet-adapter-button {
+  font-family: "Inter";
+}
+
+.wallet-adapter-button:not([disabled]):hover {
+  background: none !important;
+}
+
+/* Card */
+.card {
+  background: rgba(7, 8, 27, 0.6);
+  backdrop-filter: blur(12px);
+  z-index: 5;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid rgba(204, 214, 255, 0.05);
+  box-shadow: inset 0px 0px 7px rgba(255, 255, 255, 0.05), inset 0px 1px 1px rgba(114, 114, 114, 0.15);
+  pointer-events: none;
+  border-radius: 1.5rem;
+}
+
+/* Toast */
+.success-toast .Toastify__close-button {
+  color: #D7FFDB !important;
+  opacity: 1 !important;
+}
+.info-toast .Toastify__close-button {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+.error-toast .Toastify__close-button {
+  color: #FFD7D7 !important;
+  opacity: 1 !important;
+}
+
+/* Loader */
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  transform: scale(.5);
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #120A2F;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+
+
