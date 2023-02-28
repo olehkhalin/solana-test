@@ -206,6 +206,7 @@ const Camera: FC<CameraProps> = ({ mouseX, mouseY, ...props }) => {
       set(() => ({ camera: cam }));
       return () => set(() => ({ camera: oldCam }));
     }
+    return;
   }, [camera, cameraRef, set]);
 
   useLayoutEffect(() => {

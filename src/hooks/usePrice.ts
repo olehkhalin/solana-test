@@ -5,11 +5,17 @@ const usePrice = () => {
     "https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=usd",
     fetcher,
     { refreshInterval: 1000 }
-  );
+  ) as any;
 
   return data?.solana?.usd ?? 0;
 };
 
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
+async function fetcher<JSON = any>(
+  input: RequestInfo,
+  init?: RequestInit
+): Promise<JSON> {
+  const res = await fetch(input, init);
+  return res.json();
+}
 
 export default usePrice;
