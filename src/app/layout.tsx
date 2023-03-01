@@ -46,6 +46,7 @@ export const metadata: Metadata = {
         height: 860,
       },
     ],
+    card: "summary_large_image",
   },
   generator: "Next.js",
   creator: "@olehkhalin",
